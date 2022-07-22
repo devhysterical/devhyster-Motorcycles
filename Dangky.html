@@ -1,0 +1,336 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Thế giới xe</title>
+    <link rel="stylesheet" type="text/css" href="css/cssweb.css">
+    <link rel="stylesheet" type="text/css" href="css/dk.css">
+    <link rel="icon" href="Images/Untitled design.png">
+        	<script language="javascript">
+        	function kiemtrathongtin(){
+				var hoten= document.getElementById("hoten");
+				if(hoten.value==""){
+					alert("Vui lòng nhập Họ tên.");
+					hoten.focus();
+					return false;
+				}
+				var nam=document.getElementById("nam");
+				if(nam.value==""){
+					alert("Hãy điền năm sinh.");
+					nam.focus();
+					return false;
+				}
+				if(isNaN(nam.value)==true){
+					alert("Năm sinh phải là số.");
+					nam.value= " ";
+					nam.focus();
+					return false;	
+				}
+				var email=window.document.dangky.txtemail;
+				re=/\w+@\w+.\w+/;
+				if (email.value==""){
+					alert("Bạn chưa nhập email. ");
+					email.focus();
+					return false
+				}
+				else
+					if(re.test (email.value)==false){
+						alert("Email không đúng định dạng!");
+						email.focus();
+						return false
+					}
+					var tendangnhap= document.getElementById("tendangnhap");
+					if(tendangnhap.value==""){
+						alert("Vui lòng nhập Tên đăng nhập. ");
+						tendangnhap.focus();
+						return false;
+					}
+				var matkhau= document.getElementById("matkhau");
+					if(matkhau.value==""){
+						alert("Bạn chưa nhập Mật khẩu. ");
+						matkhau.focus();
+						return false;
+					}
+				var nhaplaimatkhau= document.getElementById("nhaplaimatkhau");
+					if(nhaplaimatkhau.value==""){
+						alert("Vui lòng nhập Lại mật khẩu. ");
+						nhaplaimatkhau.focus();
+						return false;
+					}
+					else
+					if(nhaplaimatkhau.value!= matkhau.value){
+						alert("Mật khẩu không khớp. ");
+						nhaplaimatkhau.focus();
+						return false;
+					}
+					
+				alert("Đăng ký thành công! Xin chúc mừng. "); 
+				return true;
+			}
+
+        </script>
+</head>
+
+<body>
+	    <header>
+       <img src="Images/banner.jpg">
+    </header>
+     <div class="trai">
+    </div>
+    <nav>
+    	<div id="menu">
+                	<ul>
+                        <li><a href="index.html" target="_self">TRANG CHỦ</a></li>
+                        <li>
+                        	<a href="#" target="_self">DANH MỤC SẢN PHẨM</a>
+                            <ul>
+                            	<li>
+                                	<img class="bieutuong" src="Images/honda-icb.png"><a href="honda.html"> XE HONDA</a>
+                                    <ul>
+                                    	<li><a href="honda-so.html">XE SỐ</a></li>
+                                        <li><a href="honda-tayga.html">XE TAY GA</a></li>
+                                        <li><a href="honda-taycon.html">XE CÔN TAY</a></li>
+                                        <li><a href="honda-moto.html">XE MÔ TÔ</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                	<img class="bieutuong" src="Images/yamaha-icb.png"><a href="yamaha.html"> XE YAMAHA</a>
+                                    <ul>
+                                    	<li><a href="yamaha-so.html">XE SỐ</a></li>
+                                        <li><a href="yamaha-tayga.html">XE TAY GA</a></li>
+                                        <li><a href="yamaha-moto.html">XE MÔ TÔ</a></li>
+                                    </ul>
+                                </li>
+                                
+                                <li>
+                                	<img class="bieutuong" src="Images/piaggio-icb.png"><a href="piaggio.html"> XE PIAGGIO</a>
+                                     <ul>
+                                        <li><a href="piaggio.html">XE TAY GA</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                        	<a href="#" target="_self">THÀNH VIÊN</a>
+                            <ul>
+                            	<li><a href="Dangky.html" target="_self">Đăng ký thành viên</a></li>
+                                <li><a href="dangnhap.html" target="_self">Đăng nhập</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Lienhe2.html" target="_self">LIÊN HỆ</a></li>
+                    <ul>
+                </div>
+                <div id="phai">
+                </div>
+				<div class="tim">
+                        <form>
+                            <input type="text" autofocus placeholder="Tìm kiếm xe, giá xe..." >
+                            <input type="submit" value="Tìm kiếm">
+                        </form>
+               </div>
+    </nav>
+    
+    <article>
+        	<section>
+            	 		<form action="#" method="post" name="dangky" onSubmit="kiemtrathongtin()">
+                            <div id="dktv">
+                                <p><font size="4">ĐĂNG KÝ THÀNH VIÊN</p></font>
+                            </div>
+                        	<div id="dangky">
+                                <fieldset id="thongtincn">
+                                    <legend><b>Thông tin cá nhân</b></legend>
+                                    <table width="700" cellpadding="0" border="0" cellspacing="2" >
+                                        <tr>
+                                            <td width="148" height="24" >
+                                                <p>Họ và tên:</p>
+                                            </td>
+                                            <td>
+                                                <input id="hoten" type="text" name="txthoten">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Ngày sinh:
+                                            </td>
+                                            <td>
+                                                <select name="ngay">
+                                                    <option value="1" selected>1</option>
+                                                    <option value="2" >2</option>
+                                                    <option value="3" >3</option>
+                                                    <option value="4" >4</option>
+                                                    <option value="5" >5</option>
+                                                    <option value="6" >6</option>
+                                                    <option value="7" >7</option>
+                                                    <option value="8" >8</option>
+                                                    <option value="9" >9</option>
+                                                    <option value="10" >10</option>
+                                                    <option value="11" >11</option>
+                                                    <option value="12" >12</option>
+                                                    <option value="13" >13</option>
+                                                    <option value="14" >14</option>
+                                                    <option value="15" >15</option>
+                                                    <option value="16" >16</option>
+                                                    <option value="17" >17</option>
+                                                    <option value="18" >18</option>
+                                                    <option value="19" >19</option>
+                                                    <option value="20" >20</option>
+                                                    <option value="21" >21</option>
+                                                    <option value="22" >22</option>
+                                                    <option value="23" >23</option>
+                                                    <option value="24" >24</option>
+                                                    <option value="25" >25</option>
+                                                    <option value="26" >26</option>
+                                                    <option value="27" >27</option>
+                                                    <option value="28" >28</option>
+                                                    <option value="29" >29</option>
+                                                    <option value="30" >30</option>
+                                                    <option value="31" >31</option>
+                                                </select>
+                                                Tháng 
+                                                <select name="thang">
+                                                    <option value="1" selected>1</option>
+                                                    <option value="2" >2</option>
+                                                    <option value="3" >3</option>
+                                                    <option value="4" >4</option>
+                                                    <option value="5" >5</option>
+                                                    <option value="6" >6</option>
+                                                    <option value="7" >7</option>
+                                                    <option value="8" >8</option>
+                                                    <option value="9" >9</option>
+                                                    <option value="10" >10</option>
+                                                    <option value="11" >11</option>
+                                                    <option value="12" >12</option>
+                                                 </select>
+                                                Năm
+                                                <input id="nam" width="70" type="text" name="txtnam">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="27">
+                                                <p>Giới tính:</p>
+                                            </td>
+                                            <td>
+                                                <input type="radio" value="Nam" checked name="gioitinh">
+                                                Nam
+                                                <input type="radio" value="Nữ" name="gioitinh">
+                                                Nữ
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Địa chỉ:
+                                            </td>
+                                            <td>
+                                                <textarea></textarea>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="23">
+                                                <p>Điện thoại:</p>
+                                            </td>
+                                            <td>
+                                                <input type="tel">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="25">
+                                                Email:
+                                            </td>
+                                            <td>
+                                                <input id="email" type="email" name="txtemail">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </fieldset>
+                                <fieldset id="thongtindn">
+                                    <legend><b>Thông tin đăng nhập</b></legend>
+                                    <table width="700" border="0" cellspacing="2">
+                                        <tr>
+                                            <td width="155">
+                                                Tên đăng nhập:
+                                            </td>
+                                            <td>
+                                                <input id="tendangnhap" type="text" name="txttendangnhap">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p>Mật khẩu:</p>
+                                            </td>
+                                            <td>
+                                                <input id="matkhau" type="password" name="txtmatkhau">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Nhập lại mật khẩu:
+                                            </td>
+                                            <td>
+                                                <input id="nhaplaimatkhau" type="password" name="txtnhaplaimatkhau">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </fieldset>
+                                <div align="center">
+                                    <input type="submit" onClick="return kiemta()" value="Đăng ký">
+                                    <input type="reset" value="Hủy">
+                                </div>
+                        	</div>
+                  </form>
+           
+            </section>
+     </article>
+	    <footer>
+        <table>
+            <tr>
+                <td>DỊCH VỤ</td>
+                <td>DỊCH VỤ GIA TĂNG</td>
+                <td>CÔNG CỤ HỖ TRỢ</td>
+                <td>TIN TỨC</td>
+                <td>LỜI KHUYÊN CHUYÊN GIA</td>
+                <td>HOẠT ĐỘNG ĐẠI LÝ</td>
+            </tr>
+ 
+            <tr>
+                <td>Bảo hành</td>
+                <td>Xe đã qua sử dụng</td>
+                <td>So sánh sản phẩm</td>
+                <td>Tin tức chung</td>
+                <td>Hướng dẫn sử dụng xe</td>
+                <td>Khuyến mãi</td>
+ 
+            </tr>
+ 
+            <tr>
+                <td>Bảo hành</td>
+                <td>Xe đã qua sử dụng</td>
+                <td>So sánh sản phẩm</td>
+                <td>Tin tức chung</td>
+                <td>Hướng dẫn sử dụng xe</td>
+                <td>Khuyến mãi</td>
+ 
+            </tr>
+        </table>
+ 
+        <div class="thongtin">
+ 
+            <div class="col1">
+                <h5>CÔNG TY TNHH XE MÁY BÌNH DƯƠNG</h5>
+                <p>Số GPKD: 9xxxx</p>
+                <p>Địa chỉ: Bình Dương</p>
+            <div>
+                <img src="Images/thongbaocongthuong.png" alt="thongbaocongthuong">
+            </div>
+            </div>
+ 
+        <div class="col2">
+            <h5>ĐƯỜNG DÂY NÓNG</h5>
+            <p><i class="fa-solid fa-phone"></i>0917689737</p>
+            <p><i class="fa-solid fa-envelope"></i><a href="mailto: lamtuankiet400@gmail.com">lamtuankiet400@gmail.com</a></p>
+        </div>
+    </div>
+ 
+ </footer>
+   
+</body>
+</html>

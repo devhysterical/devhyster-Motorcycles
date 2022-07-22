@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* CSS Document */
+
+div#dangky{
+	height:440px;
+	padding-top:20px;
+	padding-left:20px;
+	border:1px black solid;
+	border-top:none;
+	margin-left:13.5%;
+	background-color:#fdfdfd;
+}
+div#dktv{
+	padding-top:3px;
+}
+div#dktv>p{
+	background: linear-gradient(#c4aaa5,#dd3818,#dd3818);
+	border-top-left-radius:2px;
+	border-top-right-radius:2px;
+	text-align:center;
+	font-size:16px;
+	font-weight:bold;
+	color:white;
+	height:25px;
+	padding-top:5px;
+	margin-left:13.5%;
+}
+div#dangky>fieldset{
+	width:700px;
+	font-family:"Times New Roman", Times, serif;
+	font-size:16px;
+	margin-bottom:30px;
+	
+}
+fieldset#thongtincn{
+	text-align:left;
+	margin-left:6%;
+	height:200px;
+	line-height:22px;
+	padding-top:5px;
+	padding-left:25px;
+	padding-right:50px;
+}
+fieldset#thongtindn{
+	text-align:left;
+	margin-left:6%;
+	height:130px;
+	line-height:24px;
+	padding-top:10px;
+	padding-left:25px;
+	padding-right:50px;
+}
+
+
+	
